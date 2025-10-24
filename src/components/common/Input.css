@@ -1,4 +1,7 @@
 /* Input */
+input[type="text"], input[type="tel"], input[type="password"], textarea {
+  border-radius: inherit;
+}
 input.Input {
   padding: 12px 16px;
   border: none;
@@ -8,7 +11,7 @@ input.Input {
   color: #333;
   box-sizing: border-box;
 }
-.Input_login {
+input.Input_login {
   width: 360px;
   height: 40px;
   border-radius: 10px;

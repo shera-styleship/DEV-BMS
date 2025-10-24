@@ -15,9 +15,7 @@ import Setting from "./pages/Setting";
 import Login from "./pages/Login";
 
 // (파일 상단)
-const API_BASE = import.meta.env.PROD
-  ? "https://my-json-server.typicode.com/kjssong/mock-api"
-  : "http://localhost:4000";
+const API_BASE = "https://my-json-server.typicode.com/kjssong/mock-api";
 
 // 컨텍스트
 export const UserDataContext = createContext();
@@ -117,3 +115,4 @@ function App() {
 }
 
 export default App;
+

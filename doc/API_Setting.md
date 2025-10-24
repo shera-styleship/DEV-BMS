@@ -9,11 +9,9 @@ https://my-json-server.typicode.com/<깃허브ID>/<레포이름>
     // 파일 제일 위 어딘가( import 아래 )
     // BMS 기준 App.jsx, Project.jsx
     
-    const API_BASE = import.meta.env.PROD
-      ? "https://my-json-server.typicode.com/kjssong/mock-api"
-      : "http://localhost:4000";
+    const API_BASE = "https://my-json-server.typicode.com/kjssong/mock-api";
 
-<img width="637" height="398" alt="Image" src="https://github.com/user-attachments/assets/dd92aad2-1867-4f08-a697-1cb91c361022" />
+<img width="672" height="194" alt="Image" src="https://github.com/user-attachments/assets/d1296293-4af2-4b0d-8d94-c122fb33151e" />
 
 
 **2. fectch() 경로 변경**

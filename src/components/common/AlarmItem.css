@@ -1,0 +1,74 @@
+.AlarmItem {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #F8F8F8;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.AlarmItem>section {
+    display: flex;
+    width: 100%;
+}
+.AlarmItem_info {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    flex: 1;
+    margin-bottom: 12px;
+}
+.AlarmItem_info_img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+} 
+.AlarmItem_info_name {
+    font-size: 14px;
+    font-weight: 700;
+}
+.AlarmItem_info_time {
+    font-size: 10px;
+    font-weight: 400;
+    color: #999999;
+}
+.AlarmItem_close_btn {
+    display: flex;
+    padding: 16px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 7px;
+    height: 7px;
+    cursor: pointer;
+}
+.AlarmItem_close_btn>span{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 9px;
+    height: 1px;
+    background-color: #999999;
+    pointer-events: none;
+    border-radius: 0.5px;
+}
+.AlarmItem_close_btn>span:nth-of-type(1) {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.AlarmItem_close_btn>span:nth-of-type(2) {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.AlarmItem_title {
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #999999;
+}
+.AlarmItem_contents {
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+}

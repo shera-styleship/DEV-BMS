@@ -6,9 +6,7 @@ import ProjectList from "../components/feature/ProjectList";
 import ProjectView from "../components/feature/ProjectView";
 
 // (파일 상단)
-const API_BASE = import.meta.env.PROD
-  ? "https://my-json-server.typicode.com/kjssong/mock-api"
-  : "http://localhost:4000";
+const API_BASE = "https://my-json-server.typicode.com/kjssong/mock-api";
 
 const Project = () => {
   const { projectRefresh } = useContext(UserDataContext); // ✅ Context로부터 신호 감지
@@ -73,3 +71,4 @@ const Project = () => {
 };
 
 export default Project;
+
