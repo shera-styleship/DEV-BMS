@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+  <g id="설정" transform="translate(0.5 0.5)">
+    <path id="패스_80" data-name="패스 80" d="M14.573,8.5a5.658,5.658,0,0,0-.191-1.434L16.5,5.885,14.844,3.115l-2.115,1.18A6.119,6.119,0,0,0,10.156,2.86V.5H6.844V2.86A6.106,6.106,0,0,0,4.272,4.295L2.156,3.115.5,5.885,2.617,7.066a5.522,5.522,0,0,0,0,2.867L.5,11.115l1.656,2.771,2.116-1.18A6.106,6.106,0,0,0,6.844,14.14V16.5h3.312V14.14a6.119,6.119,0,0,0,2.573-1.435l2.115,1.18L16.5,11.115,14.383,9.934A5.658,5.658,0,0,0,14.573,8.5Z" transform="translate(-0.5 -0.5)" fill="none" stroke="#f14e24" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <circle id="타원_15" data-name="타원 15" cx="2" cy="2" r="2" transform="translate(6 6)" fill="none" stroke="#f14e24" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+  </g>
+</svg>

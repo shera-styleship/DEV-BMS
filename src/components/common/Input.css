@@ -1,0 +1,50 @@
+/* Input */
+input.Input {
+  padding: 12px 16px;
+  border: none;
+  outline: none;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+}
+.Input_login {
+  width: 360px;
+  height: 40px;
+  border-radius: 10px;
+}
+input.Input::placeholder {
+  color: #999999;
+}
+/* 토글 버튼 */
+.Input_toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  border: none;
+  position: absolute;
+  right: 18px;
+  bottom: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.Input_toggle > img {
+  width: 100%;
+  height: 100%;
+}
+.input_label_wrap {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  position: relative;
+}
+input.Input[type="file"] {
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
+}
+/* //Input */

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+  <g id="나의_프로젝트" data-name="나의 프로젝트" transform="translate(-21.5 -216.5)">
+    <path id="패스_19" data-name="패스 19" d="M10.094,4.927H.857A.423.423,0,0,0,.5,5.393V17.461a.423.423,0,0,0,.357.466h9.238a.423.423,0,0,0,.357-.466V5.393A.423.423,0,0,0,10.094,4.927Z" transform="translate(21.5 214.073)" fill="none" stroke="#f14e24" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <path id="패스_77" data-name="패스 77" d="M7.124,6.5H5.232C2.618,6.5.5,11.343.5,14.5H11.855c0-3.157-2.118-8-4.731-8" transform="translate(26.145 217.5)" fill="#fff" stroke="#f14e24" stroke-width="1"/>
+    <path id="패스_78" data-name="패스 78" d="M7.124,6.5H5.232C2.618,6.5.5,11.343.5,14.5H11.855C11.855,11.343,9.736,6.5,7.124,6.5Z" transform="translate(25.629 217.5)" fill="none" stroke="#f14e24" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <path id="패스_79" data-name="패스 79" d="M9.5,4A3.5,3.5,0,1,0,6,7.5,3.5,3.5,0,0,0,9.5,4" transform="translate(25.435 216.5)" fill="#fff" stroke="#f14e24" stroke-width="1"/>
+    <ellipse id="타원_14" data-name="타원 14" cx="3.5" cy="3.5" rx="3.5" ry="3.5" transform="translate(28.452 217)" fill="none" stroke="#f14e24" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+  </g>
+</svg>

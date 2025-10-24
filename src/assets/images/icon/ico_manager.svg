@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="12" viewBox="0 0 10 12">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_69" data-name="사각형 69" width="10" height="12" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="작업위임" transform="translate(-1777.344 -992.752)">
+    <g id="그룹_63" data-name="그룹 63" transform="translate(1777.344 992.752)" clip-path="url(#clip-path)">
+      <path id="패스_74" data-name="패스 74" d="M13.572,8.5H12.124c-2,0-3.624,3.459-3.624,5.714h8.7c0-2.255-1.622-5.714-3.623-5.714" transform="translate(-7.775 -2.786)" fill="#f8f8f8"/>
+      <path id="패스_75" data-name="패스 75" d="M13.572,8.5H12.124c-2,0-3.624,3.459-3.624,5.714h8.7C17.2,11.959,15.574,8.5,13.572,8.5Z" transform="translate(-7.775 -2.786)" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="패스_76" data-name="패스 76" d="M14.9,6.663a2.485,2.485,0,1,0-2.485,2.449A2.467,2.467,0,0,0,14.9,6.663" transform="translate(-7.548 -3.398)" fill="#f8f8f8"/>
+      <ellipse id="타원_13" data-name="타원 13" cx="2.485" cy="2.449" rx="2.485" ry="2.449" transform="translate(2.381 0.816)" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

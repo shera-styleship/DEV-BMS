@@ -1,0 +1,169 @@
+.alert_modal {z-index: 1000;}
+.alert_modal._project .alert_box {
+    width: 766px;
+}
+.alert_modal._project .new-box {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 8px;
+    padding-top: 24px;
+    border-top: 1px solid rgb(238, 238, 238);
+}
+.alert_modal._project .new-box > div{
+    display: flex;
+    width: 100%;
+    gap: 12px;
+}
+.alert_modal._project .new-box .txt {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 14px;
+}
+.alert_modal._project .new-box .txt span {color: rgb(255, 69, 0);}
+.alert_modal._project .CustomSelect button {
+    width: 226px;
+    height: 40px;
+    background-color: rgb(248, 248, 248);
+}
+.alert_modal._project .CustomSelect .select-options {
+    top: 46px;
+    background-color: rgb(248, 248, 248);
+}
+
+.alert_modal._project input.Input {
+    min-width: 226px;
+    border-radius: 10px;
+}
+.alert_modal._project ._title {position: relative;}
+.alert_modal._project ._title input.Input {
+    width: 464px;
+}
+.alert_modal._project ._deadline {width: 100%;}
+.alert_modal._project ._deadline > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 40px;
+    padding: 0 0 0 16px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: rgb(248, 248, 248);
+}
+.alert_modal._project ._deadline .date {
+    font-size: 14px;
+    color: rgb(153, 153, 153);
+}
+.alert_modal._project ._deadline input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+    opacity: 0;
+    cursor: pointer;
+}
+.alert_modal._project ._deadline input[type='date']::-webkit-calendar-picker-indicator {
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    color: transparent;
+}
+
+.alert_modal._project ._type > div {
+    display: flex;
+    gap: 32px;
+}
+.alert_modal._project ._content {
+    width: 100%;
+}
+.alert_modal._project ._content > div {
+    position: relative;
+}
+.alert_modal._project ._content textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: rgb(248, 248, 248);
+    font-size: 14px;
+    line-height: 26px;
+    resize: none;
+    outline: none;
+}
+.alert_modal._project ._content textarea::placeholder {color: rgb(153, 153, 153);}
+.alert_modal._project .limit-txt {
+    position: absolute;
+    font-size: 12px;
+    line-height: 12px;
+    color: rgb(204, 204, 204);
+}
+.alert_modal._project ._content .limit-txt {
+    right: 16px;
+    bottom: 18px;
+}
+.alert_modal._project ._title .limit-txt {
+    right: 16px;
+    bottom: 13px;
+}
+
+.rd__style1 {
+	position: absolute;
+	z-index: -9999;
+	opacity: 0;
+}
+.rd__style1 + label {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 16px;
+	padding-left: 22px;
+	cursor: pointer;
+	font-size: 14px;
+    line-height: 16px;
+    color: rgb(153, 153, 153);
+}
+.rd__style1 + label:before,
+.rd__style1 + label:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 16px;
+	height: 16px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	content: '';
+}
+.rd__style1 + label:before {
+    background-image: url("data:image/svg+xml,%3Csvg id='구성_요소_25_18' data-name='구성 요소 25 – 18' xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cg id='타원_32' data-name='타원 32' fill='%23fff' stroke='%23ccc' stroke-width='1'%3E%3Ccircle cx='8' cy='8' r='8' stroke='none'/%3E%3Ccircle cx='8' cy='8' r='7.5' fill='none'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.rd__style1:checked + label:after {
+	z-index: 3;
+	background-image: url("data:image/svg+xml,%3Csvg id='구성_요소_25_17' data-name='구성 요소 25 – 17' xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cg id='타원_32' data-name='타원 32' fill='%23fff' stroke='%23ccc' stroke-width='1'%3E%3Ccircle cx='8' cy='8' r='8' stroke='none'/%3E%3Ccircle cx='8' cy='8' r='7.5' fill='none'/%3E%3C/g%3E%3Cg id='타원_33' data-name='타원 33' fill='%23fff' stroke='%23ff4500' stroke-width='1'%3E%3Ccircle cx='8' cy='8' r='8' stroke='none'/%3E%3Ccircle cx='8' cy='8' r='7.5' fill='none'/%3E%3C/g%3E%3Ccircle id='타원_34' data-name='타원 34' cx='5' cy='5' r='5' transform='translate(3 3)' fill='%23ff4500'/%3E%3C/svg%3E%0A");
+}
+
+
+.alert_modal._project .notice-box {
+    margin-top: 16px;
+}
+.alert_modal._project .notice-box li {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: rgb(153, 153, 153);
+}
+.alert_modal._project .notice-box li a {
+    color: rgb(255, 69, 0);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}

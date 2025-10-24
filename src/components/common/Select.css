@@ -1,0 +1,107 @@
+.CustomSelect {position: relative;}
+.CustomSelect button{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-width: 90px;
+    height: 34px;
+    padding: 0 38px 0 16px ;
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='4' viewBox='0 0 7 4'%3E%3Cpath id='합치기_2' data-name='합치기 2' d='M-2377,7837l-3,3Zm-6,0,3,3Z' transform='translate(2383.5 -7836.5)' fill='none' stroke='%23999' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/svg%3E%0A");
+    font-size: 12px;
+    color: rgb(153, 153, 153);
+    text-align: left;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.CustomSelect.open button {background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='4' viewBox='0 0 7 4'%3E%3Cpath id='합치기_2' data-name='합치기 2' d='M6,3,3,0ZM0,3,3,0Z' transform='translate(0.5 0.5)' fill='none' stroke='%23999' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/svg%3E%0A");}
+.CustomSelect button.selected {
+    color: rgb(241, 78, 36);
+    font-weight: 500;
+}
+.CustomSelect .select-options {
+    position: absolute;
+    top: 36px;
+    left: 0;
+    width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .1);
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+}
+.CustomSelect .select-options li {
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 30px;
+    color: rgb(51, 51, 51);
+}
+.CustomSelect .select-options li.active {
+    color: rgb(241, 78, 36);
+    font-weight: 500;
+}
+
+/* status */
+.CustomSelect._status button {
+  width: fit-content;
+  min-width: unset;
+  height: 30px;
+  padding: 0 25px 0 10px;
+  border: none;
+  background-color: rgb(248, 248, 248);
+  background-position: right 10px center;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='5' height='3' viewBox='0 0 5 3'%3E%3Cpath id='합치기_2' data-name='합치기 2' d='M4,0,2,2ZM0,0,2,2Z' transform='translate(0.5 0.5)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/svg%3E%0A");
+}
+.CustomSelect._status.open button {background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='5' height='3' viewBox='0 0 5 3'%3E%3Cpath id='합치기_2' data-name='합치기 2' d='M4,0,2,2ZM0,0,2,2Z' transform='translate(4.5 2.5) rotate(180)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/svg%3E%0A");}
+.CustomSelect._status button:before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  margin-right: 4px;
+  border-radius: 50%;
+  background-color: rgb(88, 150, 251);
+}
+.CustomSelect._status button.selected {color: rgb(88, 150, 251);}
+.CustomSelect._status .select-options {
+  right: 0;
+  min-width: 65px;
+  padding: 10px;
+}
+.CustomSelect._status .select-options li {letter-spacing: -.12em;}
+.CustomSelect._status .select-options li:before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  margin-right: 4px;
+  border-radius: 50%;
+}
+.CustomSelect._status._receipt button,
+.CustomSelect._status .select-options ._receipt {color: rgb(88, 150, 251);}
+.CustomSelect._status._receipt button:before,
+.CustomSelect._status .select-options ._receipt:before {background-color: rgb(88, 150, 251);}
+.CustomSelect._status._progress button,
+.CustomSelect._status .select-options ._progress {color: rgb(152, 209, 80);}
+.CustomSelect._status._progress button:before,
+.CustomSelect._status .select-options ._progress:before {background-color: rgb(152, 209, 80);}
+.CustomSelect._status._hold button,
+.CustomSelect._status .select-options ._hold {color: rgb(233, 90, 108);}
+.CustomSelect._status._hold button:before,
+.CustomSelect._status .select-options ._hold:before {background-color: rgb(233, 90, 108);}
+.CustomSelect._status._completion button,
+.CustomSelect._status .select-options ._completion {color: rgb(242, 163, 84);}
+.CustomSelect._status._completion button:before,
+.CustomSelect._status .select-options ._completion:before {background-color: rgb(242, 163, 84);}
+.CustomSelect._status._cancel button,
+.CustomSelect._status .select-options ._cancel {color: rgb(153, 153, 153);}
+.CustomSelect._status._cancel button:before,
+.CustomSelect._status .select-options ._cancel:before {background-color: rgb(153, 153, 153);}
