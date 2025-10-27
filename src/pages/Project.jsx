@@ -1,12 +1,12 @@
 // src/pages/Project.jsx
+import "@/pages/Project.css";
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
-import { UserDataContext } from "../App";
-import ProjectList from "../components/feature/ProjectList";
-import ProjectView from "../components/feature/ProjectView";
+import { UserDataContext } from "@/App";
+import ProjectList from "@/components/feature/ProjectList";
+import ProjectView from "@/components/feature/ProjectView";
 
-// (파일 상단)
-const API_BASE = "https://my-json-server.typicode.com/kjssong/mock-api";
+import { API_BASE } from "@/utils/env";
 
 const Project = () => {
   const { projectRefresh } = useContext(UserDataContext); // ✅ Context로부터 신호 감지
@@ -71,4 +71,3 @@ const Project = () => {
 };
 
 export default Project;
-

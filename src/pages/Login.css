@@ -1,0 +1,67 @@
+/* Login */
+.Login_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+.Login_box {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.Login_form > form {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.Login_form > form > Button {
+  margin-top: 12px;
+}
+.styleship_logo {
+  width: 219px;
+  height: 43px;
+}
+.Login_id_remember {
+  display: flex;
+  gap: 8px;
+  position: relative;
+  font-size: 10px;
+  color: #999999;
+  cursor: pointer;
+}
+.Login_id_remember input {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+}
+.Login_id_remember_checkbox {
+  display: inline-block;
+  border: 1px solid #cccccc;
+  position: relative;
+  width: 13px;
+  height: 13px;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+.Login_id_remember input:checked + .Login_id_remember_checkbox {
+  border-color: #ff4500;
+  background-color: #ff4500;
+}
+.Login_id_remember input:checked + .Login_id_remember_checkbox::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 9px;
+  height: 6px;
+  background: url(@/assets/images/icon/checkbox.svg) 50% 50% / cover;
+  content: "";
+  transform: translate(-50%, -50%);
+}
+/* //Login */

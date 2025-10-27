@@ -1,8 +1,9 @@
+import "@components/layout/Lnb.css";
 import { NavLink } from "react-router-dom";
 import { useState, useContext } from "react";
-import LogoStyleship from "../../assets/images/common/logo_styleship.png";
-import NewProject from "../feature/NewProject";
-import { UserDataContext } from "../../App";
+import LogoStyleship from "@/assets/images/common/logo_styleship.png";
+import NewProject from "@components/feature/NewProject";
+import { UserDataContext } from "@/App";
 
 function Lnb() {
   const [showNewProject, setShowNewProject] = useState(false);
@@ -12,9 +13,10 @@ function Lnb() {
     <nav className="Lnb">
       <ul className="button-list">
         <li className="project-write">
-          <button onClick={() => {
+          <button
+            onClick={() => {
               setShowNewProject(true);
-              handleAlertBtn(); 
+              handleAlertBtn();
             }}
           >
             <span className="button-icon icon-pencil"></span>
@@ -86,7 +88,6 @@ function Lnb() {
           <img src={LogoStyleship} alt="logo" />
         </NavLink>
       </div>
-
 
       {showNewProject && alertState === "on" && (
         <NewProject

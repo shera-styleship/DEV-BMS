@@ -1,0 +1,173 @@
+/* Project View */
+.ProjectView {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+}
+.ProjectView p {
+  font-size: 12px;
+}
+.ProjectView .no-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-weight: 300;
+  font-size: 14px;
+  color: rgb(51, 51, 51);
+}
+.ProjectView .no-txt:before {
+  content: "";
+  display: block;
+  width: 69px;
+  height: 72px;
+  margin-bottom: 24px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(@/assets/images/icon/ico_project_view.svg);
+}
+.ProjectView p {
+  margin: 0;
+}
+.ProjectView .project-info div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ProjectView .project-info .date {
+  font-weight: 400;
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+}
+.ProjectView .project-info .brand {
+  margin-left: 11px;
+  font-weight: 300;
+  font-size: 12px;
+  color: rgb(153, 153, 153);
+}
+.ProjectView .project-info .url__btn {
+  padding: 12px;
+  font-size: 10px;
+  color: rgb(153, 153, 153);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.ProjectView .project-info .CustomSelect._status button {
+  width: 94px;
+  height: 34px;
+}
+.ProjectView .project-info .CustomSelect._status .select-options {
+  top: 40px;
+}
+.ProjectView .project-info .title {
+  font-weight: 700;
+  font-size: 20px;
+}
+.ProjectView .project-info .bt {
+  flex-wrap: wrap;
+  gap: 0 32px;
+  margin-top: 32px;
+}
+.ProjectView .project-info dl {
+  display: flex;
+  font-size: 14px;
+}
+.ProjectView .project-info dl + dl {
+  margin-left: 32px;
+}
+.ProjectView .project-info dl dt {
+  font-weight: 300;
+  color: rgb(153, 153, 153);
+}
+.ProjectView .project-info dl dd {
+  margin-left: 16px;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+}
+.ProjectView .project-detail {
+  display: flex;
+  max-height: 200px;
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid rgb(238, 238, 238);
+  box-sizing: border-box;
+}
+.ProjectView .project-detail .con {
+  flex: 1;
+  overflow-y: scroll;
+}
+.ProjectView .project-detail .con::-webkit-scrollbar {
+  width: 2px;
+}
+.ProjectView .project-detail .con::-webkit-scrollbar-thumb {
+  background-color: rgb(204, 204, 204);
+}
+.ProjectView .project-detail .con::-webkit-scrollbar-track {
+  background-color: rgb(255, 255, 255);
+}
+.ProjectView .project-detail._close {
+  display: none;
+}
+.ProjectView .project-detail p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: rgb(51, 51, 51);
+  word-break: break-all;
+}
+
+.ProjectView .project-control {
+  position: relative;
+  margin-top: 32px;
+  border-bottom: 1px solid rgb(238, 238, 238);
+}
+.ProjectView .project-control button {
+  cursor: pointer;
+}
+.ProjectView .project-control .control__btn {
+  padding: 11px 16px;
+  font-weight: 300;
+  font-size: 14px;
+  color: rgb(153, 153, 153);
+}
+.ProjectView .project-control .control__btn.on {
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+}
+.ProjectView .project-control .control__btn:first-child {
+  margin-left: -16px;
+}
+.ProjectView .project-control .indicator-bar {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-color: rgb(0, 0, 0);
+  transition: left 0.3s ease, width 0.3s ease;
+  pointer-events: none;
+}
+.ProjectView .project-control .expand__btn {
+  position: absolute;
+  bottom: 0;
+  right: -14px;
+  width: 12px;
+  height: 12px;
+  padding: 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px;
+  background-image: url(@/assets/images/icon/ico_expand.svg);
+}
+.ProjectView .project-task {
+  flex: 1;
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+/* //Project View */
+
+

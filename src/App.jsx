@@ -1,21 +1,20 @@
 // src/App.jsx
-import "./App.css";
+import "@/App.css";
 import { Routes, Route, Navigate, Outlet, useLocation } from "react-router-dom";
-import AppLayout from "./layouts/AppLayout";
-import AuthLayout from "./layouts/AuthLayout";
+import AppLayout from "@/layouts/AppLayout";
+import AuthLayout from "@/layouts/AuthLayout";
 import { useState, createContext, useEffect, useContext } from "react";
 
-import Home from "./pages/Home";
-import Project from "./pages/Project";
-import MyProject from "./pages/MyProject";
-import Schedule from "./pages/Schedule";
-import Knowledge from "./pages/Knowledge";
-import Hr from "./pages/Hr";
-import Setting from "./pages/Setting";
-import Login from "./pages/Login";
+import Home from "@/pages/Home";
+import Project from "@/pages/Project";
+import MyProject from "@/pages/MyProject";
+import Schedule from "@/pages/Schedule";
+import Knowledge from "@/pages/Knowledge";
+import Hr from "@/pages/Hr";
+import Setting from "@/pages/Setting";
+import Login from "@/pages/Login";
 
-// (파일 상단)
-const API_BASE = "https://my-json-server.typicode.com/kjssong/mock-api";
+import { API_BASE } from "@/utils/env";
 
 // 컨텍스트
 export const UserDataContext = createContext();
@@ -115,4 +114,3 @@ function App() {
 }
 
 export default App;
-

@@ -1,0 +1,14 @@
+/* Project */
+.Project {
+  height: 100%;
+}
+.project-wrap {
+  display: flex;
+  height: 100%;
+}
+.project-wrap > div {
+  width: 100%;
+  padding: 30px clamp(15px, calc(30 / 1920 * 100vw), 30px);
+  box-sizing: border-box;
+}
+/* //Project */

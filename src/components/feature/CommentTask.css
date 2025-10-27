@@ -1,0 +1,224 @@
+/* Comment */
+.CommentTask {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+.CommentTask .comment-list {
+  flex: 1;
+  min-height: 90px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+.CommentTask .comment-list > div + div {
+  margin-top: 12px;
+}
+.CommentTask .comment-list::-webkit-scrollbar {
+  width: 2px;
+}
+.CommentTask .comment-list::-webkit-scrollbar-thumb {
+  background-color: rgb(204, 204, 204);
+}
+.CommentTask .comment-list::-webkit-scrollbar-track {
+  background-color: rgb(255, 255, 255);
+}
+.CommentTask .comment-list > div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.CommentTask .comment-list .date-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: 24px;
+  margin: auto;
+  padding: 0 10px;
+  border-radius: 10px;
+  background-color: rgb(248, 248, 248);
+  font-weight: 400;
+  font-size: 10px;
+  color: rgb(153, 153, 153);
+  text-align: center;
+}
+.CommentTask .comment {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.CommentTask .comment .profile {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.CommentTask .comment .profile img {
+  display: block;
+  width: 100%;
+}
+.CommentTask .comment .msg-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+.CommentTask .comment .user-name {
+  font-weight: 500;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+}
+.CommentTask .comment .msg {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  max-width: calc(100% - 50px);
+}
+.CommentTask .comment .msg .txt {
+  position: relative;
+  width: fit-content;
+  padding: 12px;
+  border-radius: 10px;
+  background-color: rgb(255, 236, 229);
+  font-weight: 300;
+  font-size: 14px;
+  color: rgb(51, 51, 51);
+}
+.CommentTask .comment-option {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  width: 115px;
+  padding: 7px 16px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+.CommentTask .comment-option button {
+  padding: 9px 0;
+  font-weight: 300;
+  font-size: 12px;
+  color: rgb(51, 51, 51);
+  text-align: left;
+  cursor: pointer;
+}
+.CommentTask .comment .msg .txt._file {
+  padding: 12px 45px;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 13px;
+  background-image: url(@/assets/images/icon/ico_file_down.svg);
+  cursor: pointer;
+}
+.CommentTask .comment .msg .txt._file:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  background-repeat: no-repeat;
+  background-position: left 13px center;
+  background-size: 11px;
+  background-image: url(@/assets/images/icon/ico_file.svg);
+}
+.CommentTask .comment .msg .time {
+  flex-shrink: 0;
+  font-weight: 400;
+  font-size: 10px;
+  color: rgb(153, 153, 153);
+}
+.CommentTask .comment._us {
+  justify-content: flex-end;
+}
+.CommentTask .comment._us .profile {
+  order: 1;
+}
+.CommentTask .comment._us .msg-box {
+  align-items: flex-end;
+}
+.CommentTask .comment._us .user-name {
+  text-align: right;
+}
+.CommentTask .comment._us .msg .txt {
+  order: 1;
+  background-color: rgb(248, 248, 248);
+}
+
+.CommentTask .comment-input {
+  flex-shrink: 0;
+  margin-top: 12px;
+  padding: 16px 10px 10px 16px;
+  border-radius: 10px;
+  background-color: rgb(248, 248, 248);
+}
+.CommentTask .comment-input textarea {
+  width: 100%;
+  padding: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(153, 153, 153);
+  resize: none;
+  background: transparent;
+  outline: none;
+}
+.CommentTask .comment-input textarea::placeholder {
+  color: rgb(153, 153, 153);
+}
+.CommentTask .comment-input .control-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.CommentTask .comment-input .control-box .file-name {
+  padding-bottom: 6px;
+  font-weight: 300;
+  font-size: 12px;
+  color: rgb(255, 69, 0);
+}
+.CommentTask .comment-input .control-box > div {
+  display: flex;
+  align-items: center;
+}
+.CommentTask .comment-input .control-box button {
+  font-size: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+.CommentTask .comment-input .control-box .file-upload__btn {
+  width: 12px;
+  height: 12px;
+  padding: 8px;
+  background-size: 12px;
+  background-image: url(@/assets/images/icon/ico_file_upload.svg);
+}
+.CommentTask .comment-input .control-box .set-manager__btn {
+  width: 10px;
+  height: 12px;
+  padding: 8px;
+  background-size: 10px;
+  background-image: url(@/assets/images/icon/ico_manager.svg);
+}
+.CommentTask .comment-input .control-box .cmt-write__btn {
+  width: 34px;
+  height: 34px;
+  margin-left: 8px;
+  border-radius: 50%;
+  background-color: rgb(255, 69, 0);
+  background-size: 13px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14.207' height='13.414' viewBox='0 0 14.207 13.414'%3E%3Cg id='그룹_97' data-name='그룹 97' transform='translate(-1848.594 -994.849)'%3E%3Cline id='선_31' data-name='선 31' x2='11.933' transform='translate(1849.094 1001.495)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-width='1'/%3E%3Cline id='선_32' data-name='선 32' x2='8.478' transform='translate(1856.098 995.556) rotate(45)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-width='1'/%3E%3Cline id='선_33' data-name='선 33' y2='8.478' transform='translate(1862.094 1001.561) rotate(45)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+/* //Comment */
+

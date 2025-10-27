@@ -1,12 +1,11 @@
 import { useState, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Button from "../common/Button";
-import Select from "../common/Select";
-import Input from "../common/Input";
-import Alert from "../common/Alert"; 
-import { UserDataContext } from "../../App";
+import Button from "@components/common/Button";
+import Select from "@components/common/Select";
+import Input from "@components/common/Input";
+import Alert from "@components/common/Alert";
+import { UserDataContext } from "@/App";
 import "./NewProject.css";
-
 
 const NewProject = ({ alertType = true, onClose }) => {
   const { userData, auth, refreshProjects } = useContext(UserDataContext);
@@ -218,7 +217,9 @@ const NewProject = ({ alertType = true, onClose }) => {
               {/* 제목 / 마감일 */}
               <div className="select-box">
                 <div className="_title">
-                  <p className="txt">프로젝트 제목 <span>*</span></p>
+                  <p className="txt">
+                    프로젝트 제목 <span>*</span>
+                  </p>
                   <Input
                     inputType="text"
                     inputValue={form.title}
@@ -235,8 +236,7 @@ const NewProject = ({ alertType = true, onClose }) => {
                     <p className="date">
                       {form.endDate
                         ? new Date(form.endDate).toLocaleDateString("ko-KR")
-                        : "기한 없음"
-                      }
+                        : "기한 없음"}
                     </p>
                     <input
                       type="date"
@@ -286,7 +286,9 @@ const NewProject = ({ alertType = true, onClose }) => {
               {/* 프로젝트 내용 */}
               <div className="select-box">
                 <div className="_content">
-                  <p className="txt">프로젝트 내용 <span>*</span></p>
+                  <p className="txt">
+                    프로젝트 내용 <span>*</span>
+                  </p>
                   <div>
                     <textarea
                       name="description"
@@ -294,7 +296,9 @@ const NewProject = ({ alertType = true, onClose }) => {
                       onChange={handleChange}
                       placeholder="작업 내용을 입력하세요"
                     />
-                    <span className="limit-txt">{form.description.length}/500자</span>
+                    <span className="limit-txt">
+                      {form.description.length}/500자
+                    </span>
                   </div>
                 </div>
               </div>
@@ -302,9 +306,14 @@ const NewProject = ({ alertType = true, onClose }) => {
 
             <div className="notice-box">
               <ul>
-                <li>작업일정 : 자료 접수후 5일 (영업일 기준, 주말 및 공휴일 제외)</li>
+                <li>
+                  작업일정 : 자료 접수후 5일 (영업일 기준, 주말 및 공휴일 제외)
+                </li>
                 <li>기타 일정시 담당자와 꼭 협의해 주시기 바랍니다.</li>
-                <li>페이지 수정 및 변경을 요청시에는 첨부양식 사용바랍니다. <a href="">양식다운받기</a></li>
+                <li>
+                  페이지 수정 및 변경을 요청시에는 첨부양식 사용바랍니다.{" "}
+                  <a href="">양식다운받기</a>
+                </li>
               </ul>
             </div>
 

@@ -1,4 +1,6 @@
-const TimeTask = ()=>{
-    return <>TimeTask</>
-}
+import "@components/feature/TimeTask.css";
+
+const TimeTask = () => {
+  return <>TimeTask</>;
+};
 export default TimeTask;

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
-import Header from "../components/layout/Header";
-import Lnb from "../components/layout/Lnb";
+import Header from "@/components/layout/Header";
+import Lnb from "@/components/layout/Lnb";
 
 function AppLayout() {
   const [lnbToggle, setLnbToggle] = useState(true);

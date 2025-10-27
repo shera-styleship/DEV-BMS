@@ -1,0 +1,261 @@
+/* Project List */
+.ProjectList {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.ProjectFilterBar {
+  container-type: inline-size;
+  container-name: filterbar;
+  flex-shrink: 0;
+}
+.ProjectFilterBar > div {
+  display: flex;
+  justify-content: space-between;
+}
+.ProjectFilterBar > div + div {
+  margin-top: 24px;
+}
+.ProjectFilterBar .select-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 480px;
+}
+.ProjectFilterBar .select-box .CustomSelect {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 183px;
+}
+.ProjectFilterBar .select-box .CustomSelect._team {
+  max-width: 85px;
+}
+.ProjectFilterBar .input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin-left: 12px;
+}
+.ProjectFilterBar .input-box .input_label_wrap {
+  width: 100%;
+}
+.ProjectFilterBar .input-box input {
+  display: block;
+  width: 100%;
+  /*min-width: 180px;*/
+  border-radius: 10px;
+  height: 34px;
+  padding-right: 46px;
+}
+.ProjectFilterBar .input-box .pj-search__btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 46px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15.811' height='15.811' viewBox='0 0 15.811 15.811'%3E%3Cg id='그룹_70' data-name='그룹 70' transform='translate(0.237 0.237)'%3E%3Cline id='선_19' data-name='선 19' x2='3.909' y2='3.909' transform='translate(10.603 10.603)' fill='none' stroke='%23666' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'/%3E%3Ccircle id='타원_16' data-name='타원 16' cx='5.72' cy='5.72' r='5.72' transform='translate(0.513 0.513)' fill='none' stroke='%23666' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'/%3E%3C/g%3E%3C/svg%3E%0A");
+  cursor: pointer;
+}
+.ProjectFilterBar .status-box {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.ProjectFilterBar .status-box button {
+  padding: 3px 0;
+  font-size: 18px;
+  color: rgb(153, 153, 153);
+  word-break: keep-all;
+  cursor: pointer;
+}
+.ProjectFilterBar .status-box button.on {
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+}
+.ProjectFilterBar .date-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: rgb(153, 153, 153);
+}
+.ProjectFilterBar .date-box input[type="date"] {
+  width: 102px;
+  height: 100%;
+  border: none;
+  font-size: 14px;
+  color: rgb(153, 153, 153);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='15' viewBox='0 0 14 15'%3E%3Cg id='그룹_272' data-name='그룹 272' transform='translate(-1446 -541)'%3E%3Cg id='사각형_245' data-name='사각형 245' transform='translate(1447 545)' fill='none' stroke='%23999' stroke-width='1'%3E%3Crect width='12' height='1' stroke='none'/%3E%3Crect x='0.5' y='0.5' width='11' fill='none'/%3E%3C/g%3E%3Cg id='사각형_252' data-name='사각형 252' transform='translate(1446 542)' fill='none' stroke='%23999' stroke-width='1'%3E%3Crect width='14' height='14' rx='2' stroke='none'/%3E%3Crect x='0.5' y='0.5' width='13' height='13' rx='1.5' fill='none'/%3E%3C/g%3E%3Cg id='사각형_246' data-name='사각형 246' transform='translate(1449 548)' fill='none' stroke='%23999' stroke-width='1'%3E%3Crect width='2' height='2' stroke='none'/%3E%3Crect x='0.5' y='0.5' width='1' height='1' fill='none'/%3E%3C/g%3E%3Cg id='사각형_253' data-name='사각형 253' transform='translate(1449 541)' fill='none' stroke='%23999' stroke-width='1'%3E%3Crect width='2' height='3' stroke='none'/%3E%3Crect x='0.5' y='0.5' width='1' height='2' fill='none'/%3E%3C/g%3E%3Cg id='사각형_254' data-name='사각형 254' transform='translate(1455 541)' fill='none' stroke='%23999' stroke-width='1'%3E%3Crect width='2' height='3' stroke='none'/%3E%3Crect x='0.5' y='0.5' width='1' height='2' fill='none'/%3E%3C/g%3E%3Cg id='사각형_249' data-name='사각형 249' transform='translate(1449 551)' fill='none' stroke='%23999' stroke-width='1'%3E%3Crect width='2' height='2' stroke='none'/%3E%3Crect x='0.5' y='0.5' width='1' height='1' fill='none'/%3E%3C/g%3E%3Cg id='사각형_247' data-name='사각형 247' transform='translate(1452 548)' fill='none' stroke='%23999' stroke-width='1'%3E%3Crect width='2' height='2' stroke='none'/%3E%3Crect x='0.5' y='0.5' width='1' height='1' fill='none'/%3E%3C/g%3E%3Cg id='사각형_250' data-name='사각형 250' transform='translate(1452 551)' fill='none' stroke='%23999' stroke-width='1'%3E%3Crect width='2' height='2' stroke='none'/%3E%3Crect x='0.5' y='0.5' width='1' height='1' fill='none'/%3E%3C/g%3E%3Cg id='사각형_248' data-name='사각형 248' transform='translate(1455 548)' fill='none' stroke='%23999' stroke-width='1'%3E%3Crect width='2' height='2' stroke='none'/%3E%3Crect x='0.5' y='0.5' width='1' height='1' fill='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+  outline: none;
+}
+.ProjectFilterBar
+  .date-box
+  input[type="date"]::-webkit-calendar-picker-indicator,
+.ProjectFilterBar .date-box input[type="date"]::-webkit-inner-spin-button {
+  opacity: 0;
+  appearance: none;
+}
+.ProjectFilterBar .date-box .pj-date__btn {
+  width: 65px;
+  height: 34px;
+  border-radius: 10px;
+  background-color: rgb(248, 248, 248);
+  font-weight: 500;
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+@container filterbar (max-width: 630px) {
+  .ProjectFilterBar .status-box {
+    gap: 10px;
+  }
+  .ProjectFilterBar .status-box button {
+    font-size: 15px;
+  }
+  .ProjectFilterBar .date-box {
+    gap: 10px;
+  }
+}
+.item-list-bar {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: 100%;
+  height: 34px;
+  margin-top: 24px;
+  border: 1px solid rgb(238, 238, 238);
+  border-width: 1px 0 1px 0;
+}
+.item-list-bar p {
+  flex-shrink: 0;
+  margin: 0;
+  font-weight: 400;
+  font-size: 12px;
+  color: rgb(153, 153, 153);
+  text-align: center;
+}
+.item-list-bar p.date {
+  width: 50px;
+  margin-right: clamp(15px, calc(30 / 1920 * 100vw), 30px);
+}
+.item-list-bar p.number {
+  width: 50px;
+  margin-right: clamp(15px, calc(30 / 1920 * 100vw), 30px);
+}
+.item-list-bar p.brand {
+  width: clamp(110px, calc(132 / 1920 * 100vw), 132px);
+  text-align: left;
+}
+.item-list-bar p.type {
+  width: 50px;
+  margin-right: clamp(15px, calc(25 / 1920 * 100vw), 25px);
+}
+.item-list-bar p.status {
+  width: 65px;
+  margin-left: clamp(10px, calc(20 / 1920 * 100vw), 20px);
+}
+.item-list-bar p.title {
+  flex: 1;
+  flex-shrink: 1;
+  text-align: center;
+}
+
+.item__list {
+  flex: 1;
+  margin: 13px -10px 0 0;
+  padding-right: 10px;
+  overflow-y: scroll;
+  min-height: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.item__list::-webkit-scrollbar {
+  display: none;
+}
+.item__list .no-txt {
+  font-weight: 300;
+  font-size: 14px;
+  color: rgb(51, 51, 51);
+  text-align: center;
+}
+.ProjectItem {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.ProjectItem + .ProjectItem {
+  margin-top: 10px;
+}
+.ProjectItem p {
+  flex-shrink: 0;
+  margin: 0;
+  font-weight: 300;
+  font-size: 14px;
+  color: rgb(51, 51, 51);
+  text-align: center;
+}
+.ProjectItem .date {
+  width: 50px;
+  margin-right: clamp(15px, calc(30 / 1920 * 100vw), 30px);
+}
+.ProjectItem .number {
+  width: 50px;
+  margin-right: clamp(15px, calc(30 / 1920 * 100vw), 30px);
+}
+.ProjectItem .brand {
+  width: clamp(110px, calc(132 / 1920 * 100vw), 132px);
+  text-align: left;
+}
+.ProjectItem .type {
+  width: 50px;
+  margin-right: clamp(15px, calc(25 / 1920 * 100vw), 25px);
+}
+.ProjectItem .title {
+  flex: 1;
+  position: relative;
+  margin-right: clamp(10px, calc(20 / 1920 * 100vw), 20px);
+  text-align: left;
+}
+.ProjectItem .title:hover {
+  text-decoration: underline;
+}
+.ProjectItem .title .tag {
+  display: inline-block;
+  justify-self: center;
+  align-items: center;
+  height: 14px;
+  margin-left: 2px;
+  padding: 0 5px;
+  border-radius: 10px;
+  background-color: rgb(248, 248, 248);
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 14px;
+  color: rgb(255, 69, 0);
+}
+.ProjectItem .title .tag:first-child {
+  margin-left: 4px;
+}
+.ProjectItem .title .tag.new {
+  margin: 0;
+  background-color: transparent;
+  font-weight: 900;
+  animation: blink 0.5s infinite alternate;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* //Project List */

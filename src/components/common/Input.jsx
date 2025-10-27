@@ -1,9 +1,9 @@
 // src/components/form/Input.jsx
 import { useState } from "react";
 import PropTypes from "prop-types";
-import "./Input.css";
-import invisible from "../../assets/images/icon/invisible.png"
-import visible from "../../assets/images/icon/visible.png"
+import "@components/common/Input.css";
+import invisible from "@/assets/images/icon/invisible.png";
+import visible from "@/assets/images/icon/visible.png";
 
 /**
  * 공용 Input 컴포넌트

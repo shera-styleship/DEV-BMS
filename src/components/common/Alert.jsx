@@ -1,7 +1,8 @@
+import "@components/common/Alert.css";
 import { useState, useContext, useEffect } from "react";
-import Button from "../common/Button";
-import { UserDataContext } from "../../App";
-import { UserDispatchContext } from "../../App";
+import Button from "@components/common/Button";
+import { UserDataContext } from "@/App";
+import { UserDispatchContext } from "@/App";
 
 const Alert = ({ title, children, alertType = true }) => {
   const { handleAlertBtn, alertState } = useContext(UserDataContext);

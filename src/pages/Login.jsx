@@ -1,11 +1,12 @@
+import "@/pages/Login.css";
 import { useState, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Input from "../components/common/Input";
-import Button from "../components/common/Button";
-import Alert from "../components/common/Alert";
-import { UserDataContext } from "../App";
-import { UserDispatchContext } from "../App";
-import styleshipLogo from '../assets/images/common/styleship_logo.png'
+import Input from "@/components/common/Input";
+import Button from "@/components/common/Button";
+import Alert from "@/components/common/Alert";
+import { UserDataContext } from "@/App";
+import { UserDispatchContext } from "@/App";
+import styleshipLogo from "@/assets/images/common/styleship_logo.png";
 
 const STORAGE_KEY = "remembered_username"; // 로컬스토리지 키
 

@@ -1,0 +1,125 @@
+/* File */
+.FileTask {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+.FileTask .file-list {
+  flex: 1;
+  min-height: 90px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+.FileTask .file-list::-webkit-scrollbar {
+  width: 2px;
+}
+.FileTask .file-list::-webkit-scrollbar-thumb {
+  background-color: rgb(204, 204, 204);
+}
+.FileTask .file-list::-webkit-scrollbar-track {
+  background-color: rgb(255, 255, 255);
+}
+.FileTask .file-list > div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.FileTask .file-list .date-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: 24px;
+  margin: auto;
+  padding: 0 10px;
+  border-radius: 10px;
+  background-color: rgb(248, 248, 248);
+  font-weight: 400;
+  font-size: 10px;
+  color: rgb(153, 153, 153);
+  text-align: center;
+}
+.FileTask .file-list .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 100%;
+}
+.FileTask .file {
+  width: calc((100% - 12px) / 2);
+}
+.FileTask .file .info-box {
+  display: flex;
+  align-items: center;
+}
+.FileTask .file .info-box .user-name {
+  font-weight: 500;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+}
+.FileTask .file .info-box .time {
+  margin-left: 6px;
+  font-weight: 400;
+  font-size: 10px;
+  color: rgb(153, 153, 153);
+}
+.FileTask .file .down-box {
+  position: relative;
+  margin-top: 8px;
+  padding: 12px 45px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: rgb(248, 248, 248);
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 13px;
+  background-image: url(@/assets/images/icon/ico_file_down.svg);
+  cursor: pointer;
+}
+.FileTask .file .down-box p {
+  font-weight: 300;
+  font-size: 14px;
+  color: rgb(51, 51, 51);
+}
+.FileTask .file .down-box:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  background-repeat: no-repeat;
+  background-position: left 13px center;
+  background-size: 11px;
+  background-image: url(@/assets/images/icon/ico_file.svg);
+}
+
+.FileTask .file-input {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  border-top: 1px solid rgb(238, 238, 238);
+}
+.FileTask .file-input .file-upload__btn {
+  display: flex;
+  margin-right: -20px;
+  padding: 20px;
+  font-size: 12px;
+  color: rgb(153, 153, 153);
+  cursor: pointer;
+}
+.FileTask .file-input .file-upload__btn:before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+  background: url(@/assets/images/icon/ico_file_upload.svg) center / contain no-repeat;
+}
+/* //File */
+

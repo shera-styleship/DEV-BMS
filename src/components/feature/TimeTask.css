@@ -1,0 +1,77 @@
+/* Time */
+.TimeTask {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+.TimeTask .time-list {
+  flex: 1;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.TimeTask .time-list::-webkit-scrollbar {
+  display: none;
+}
+.TimeTask .time-list > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.TimeTask .time-list .time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  padding: 12px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: rgb(248, 248, 248);
+}
+.TimeTask .time-list .time > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  min-width: 56%;
+}
+.TimeTask .time-list .time dl {
+  display: flex;
+  gap: calc(16 / 1920 * 100vw);
+}
+.TimeTask .time-list .time dl dt {
+  font-weight: 300;
+  font-size: 14px;
+  color: rgb(153, 153, 153);
+}
+.TimeTask .time-list .time dl dd {
+  font-weight: 500;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+}
+.TimeTask .time-list .time .edit-time__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 16px;
+  border-radius: 10px;
+  background-color: rgb(204, 204, 204);
+  font-size: 10px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+.TimeTask .time-input {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+.TimeTask .time-input button {
+  width: 150px;
+  font-weight: 500px;
+  font-size: 12px;
+}
+/* //Time */
