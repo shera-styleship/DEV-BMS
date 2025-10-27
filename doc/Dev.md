@@ -44,8 +44,20 @@ src/
 ## 🗂️  doc/ - 내부 가이드
 | 파일명 | 📝 설명 |
 |:--|:--|
-| `API_Setting.md` | API 설정 가이드 |
+| [`API_Setting.md`](./API_Setting.md) | API 설정 가이드 |
 | `Dev.md` | 프로젝트 개발 규칙 가이드 |
+| [`Vercel_setting.md`](./Vercel_setting.md) | Vercel 배포 가이드 |
+| [`mockupData.md`](./mockupData.md) | 목업데이터 가이드 |
+| [`pages.md`](./pages.md) | 페이지 컴포넌트 가이드 |
+
+#### 🔹 doc/components/ - 공용 컴포넌트 가이드
+| 파일명 | 📝 설명 |
+|:--|:--|
+| [`Alarm.md`](./components/Alarm.md) | 알람 컴포넌트 가이드 |
+| [`Alert.md`](./components/Alert.md) | 공용 알럿 컴포넌트 가이드 |
+| [`Button.md`](./components/Button.md) | 공용 버튼 컴포넌트 가이드 |
+| [`Input.md`](./components/Input.md) | 공용 인풋 컴포넌트 가이드 |
+| [`Select.md`](./components/Select.md) | 공용 셀렉트 컴포넌트 가이드 |
 
 ## 📘 전체 모듈 및 파일 구조 설명
 
