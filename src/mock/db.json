@@ -8,6 +8,7 @@
       "userImage": "/images/profile01.jpg",
       "userPhone": "010-0000-0000",
       "userCompany": "NPLUS(네파)",
+      "userTeam": "",
       "jobTitle": "과장"
     },
     {
@@ -18,6 +19,7 @@
       "userImage": "/images/profile02.jpg",
       "userPhone": "010-0000-0000",
       "userCompany": "STYLESHIP",
+      "userTeam": "CR",
       "jobTitle": "사원"
     },
     {
@@ -28,6 +30,7 @@
       "userImage": "/images/profile03.jpg",
       "userPhone": "010-0000-0000",
       "userCompany": "미스토코리아(주)",
+      "userTeam": "FILA",
       "jobTitle": "대리"
     },
     {
@@ -38,7 +41,41 @@
       "userImage": "/images/profile03.jpg",
       "userPhone": "010-0000-0000",
       "userCompany": "NPLUS(네파)",
+      "userTeam": "",
       "jobTitle": "사원"
+    },
+    {
+      "id": "4",
+      "userId": "test05",
+      "userPassword": "0000",
+      "userName": "김케즈",
+      "userImage": "/images/profile01.jpg",
+      "userPhone": "010-0000-0000",
+      "userCompany": "미스토코리아(주)",
+      "userTeam": "KEDS",
+      "jobTitle": "사원"
+    },
+    {
+      "id": "5",
+      "userId": "test06",
+      "userPassword": "0000",
+      "userName": "고구마",
+      "userImage": "/images/profile02.jpg",
+      "userPhone": "010-0000-0000",
+      "userCompany": "STYLESHIP",
+      "userTeam": "UXI",
+      "jobTitle": "대리"
+    },
+    {
+      "id": "6",
+      "userId": "test07",
+      "userPassword": "0000",
+      "userName": "바나나",
+      "userImage": "/images/profile01.jpg",
+      "userPhone": "010-0000-0000",
+      "userCompany": "STYLESHIP",
+      "userTeam": "DV",
+      "jobTitle": "과장"
     }
   ],
   "projectList": [
