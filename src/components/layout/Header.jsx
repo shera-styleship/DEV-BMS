@@ -10,9 +10,23 @@ function Header({ attendanceToggle, onAttendanceToggle, onLnbToggle }) {
   const { userData = [], auth = { isLoggedIn: false, userId: null } } =
     useContext(UserDataContext);
   const [isAlarm, setIsAlarm] = useState(false);
+  const loginUser = useMemo(() => {
+    if (!auth?.isLoggedIn) return null;
+
+    try {
+      const stored = localStorage.getItem("bms_member");
+      if (!stored) return null;
+      return JSON.parse(stored);
+    } catch (e) {
+      console.error("파싱 오류", e);
+      return null;
+    }
+  }, [auth?.isLoggedIn]);  
+/*  
   const loginUser = auth?.isLoggedIn
     ? userData?.find((user) => String(user.id) === String(auth.userId)) ?? null
     : null;
+*/
   const imgSrc = useMemo(
     () => getUserImageSrc(loginUser?.userImage),
     [loginUser?.userImage]
@@ -39,7 +53,7 @@ function Header({ attendanceToggle, onAttendanceToggle, onLnbToggle }) {
             />
           </div>
           <div className="profile-info">
-            <p className="profile-name">{loginUser?.userName || "게스트"}</p>
+            <p className="profile-name">{loginUser?.memberName || "게스트"}</p>
             <p className="profile-status">
               (<PublicIP />) 접속중
             </p>
@@ -47,9 +61,9 @@ function Header({ attendanceToggle, onAttendanceToggle, onLnbToggle }) {
         </div>
       </div>
 
-      {/* 출퇴근 체크, 알림 */}
+      {/* 출퇴근 체크, 알림 memberType = 1 스타일쉽직원 */}
       <div>
-        {loginUser?.userCompany?.toLowerCase() === "styleship" && (
+        {loginUser?.memberType === 1 && (
           <button
             className={`attendance-button ${
               attendanceToggle ? "attendance-active" : ""

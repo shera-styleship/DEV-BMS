@@ -13,6 +13,7 @@ import Knowledge from "@/pages/Knowledge";
 import Hr from "@/pages/Hr";
 import Setting from "@/pages/Setting";
 import Login from "@/pages/Login";
+import Logout from "@/pages/Logout";
 
 import { API_BASE } from "@/utils/env";
 
@@ -51,7 +52,21 @@ function App() {
   const handleAlertBtn = () =>
     setAlertState((prev) => (prev === "on" ? "" : "on"));
 
-  // (기존 useEffect 내부)
+  useEffect(() => {
+    const token = localStorage.getItem("bms_token");
+    const member = localStorage.getItem("bms_member");
+
+    if (token && member) {
+      const user = JSON.parse(member);
+      setAuth({
+        isLoggedIn: true,
+        userId: user.memberID,
+      });
+    }
+  }, []);
+
+    // (기존 useEffect 내부)
+    /*
   useEffect(() => {
     (async () => {
       try {
@@ -64,10 +79,18 @@ function App() {
       }
     })();
   }, []);
+    */
 
   // 로그인/로그아웃만 디스패치 컨텍스트로 제공
   const login = (id) => setAuth({ isLoggedIn: true, userId: id });
-  const logout = () => setAuth({ isLoggedIn: false, userId: null });
+  const logout = () => {
+    // 1. 로컬스토리지 삭제
+    localStorage.removeItem("bms_token");
+    localStorage.removeItem("bms_member");
+
+    // 2. React 인증 상태 초기화
+    setAuth({ isLoggedIn: false, userId: null });
+  };
 
   return (
     <UserDataContext.Provider
@@ -95,6 +118,7 @@ function App() {
             <Route element={<AppLayout />}>
               <Route index element={<Project />} />
               <Route path="/" element={<Project />} />
+              <Route path="/logout" element={<Logout />} />              
               <Route path="/Project" element={<Project />} />
               <Route path="/Project/:projectNo" element={<Project />} />
               <Route path="/MyProject" element={<MyProject />} />

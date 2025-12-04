@@ -7,19 +7,21 @@ import Alert from "@/components/common/Alert";
 import { UserDataContext } from "@/App";
 import { UserDispatchContext } from "@/App";
 import styleshipLogo from "@/assets/images/common/styleship_logo.png";
+import axios from "axios";
 
-const STORAGE_KEY = "remembered_username"; // 로컬스토리지 키
+const STORAGE_KEY = "remembered_username";
+const TOKEN_KEY = "bms_token";   // JWT 저장용
+const MEMBER_KEY = "bms_member";
 
 const Login = () => {
   const nav = useNavigate();
   const [loginId, setLoginId] = useState("");
   const [loginPw, setLoginPw] = useState("");
-  const [rememberId, setRememberId] = useState(false); // 체크박스 상태
-  const { userData, handleAlertBtn } = useContext(UserDataContext);
+  const [rememberId, setRememberId] = useState(false);
+  const { handleAlertBtn } = useContext(UserDataContext);
   const { login } = useContext(UserDispatchContext);
   const [error, setError] = useState("");
 
-  // 첫 로드 시 저장된 아이디 복원
   useEffect(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved) {
@@ -33,42 +35,52 @@ const Login = () => {
     handleAlertBtn();
   };
 
-  const handleLogin = () => {
+  const handleLogin = async () => {
     const id = loginId.trim();
     const pw = loginPw.trim();
 
-    if (!id && !pw) {
+    if (!id || !pw) {
       openAlert("아이디와 비밀번호를 입력하세요.");
       return;
     }
-    if (!id) {
-      openAlert("아이디를 입력하세요.");
-      return;
-    }
-    if (!pw) {
-      openAlert("비밀번호를 입력하세요.");
-      return;
-    }
 
-    // 아이디가 일치하는 사용자 찾기(없으면 undefined)
-    const user = userData.find((u) => String(u.userId) === String(id));
-    if (!user) {
-      openAlert("해당 아이디가 존재하지 않습니다.");
-      return;
-    }
-    if (user.userPassword !== pw) {
-      openAlert("비밀번호가 일치하지 않습니다.");
-      return;
-    }
+    try {
+      const res = await axios.post(
+        "https://bmsapi.styleship.com/api/Auth/login",
+        {
+          username: id,
+          password: pw,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
-    // 여기서 아이디 저장/삭제 처리
-    if (rememberId) localStorage.setItem(STORAGE_KEY, id);
-    else localStorage.removeItem(STORAGE_KEY);
+      const { token, member } = res.data;
 
-    if (login) {
-      login(user.id); // 전역 로그인
+      // 토큰 및 회원정보 저장
+      localStorage.setItem(TOKEN_KEY, token);
+      localStorage.setItem(MEMBER_KEY, JSON.stringify(member));
+
+      // 아이디 저장 처리
+      if (rememberId) localStorage.setItem(STORAGE_KEY, id);
+      else localStorage.removeItem(STORAGE_KEY);
+
+      // 전역 로그인 처리
+      if (login) login(member);
+
+      // 메인 이동
+      nav("/");
+    } catch (err) {
+      if (err.response?.status === 401) {
+        openAlert("아이디 또는 비밀번호가 올바르지 않습니다.");
+      } else {
+        openAlert("서버 로그인 오류가 발생했습니다.");
+        console.error(err);
+      }
     }
-    nav("/"); // 홈으로 이동
   };
 
   return (
@@ -92,8 +104,6 @@ const Login = () => {
                 inputValue={loginId}
                 setValue={setLoginId}
                 inputChar="login"
-                // 가능하면 내부 input에 전달되도록 자동완성 힌트도 추가
-                // autoComplete="username"
               />
               <Input
                 inputType="password"
@@ -102,10 +112,8 @@ const Login = () => {
                 setValue={setLoginPw}
                 inputChar="login"
                 toggleVisibility
-                // autoComplete="current-password"
               />
 
-              {/* 아이디 저장 체크박스 */}
               <label className="Login_id_remember">
                 <input
                   type="checkbox"
@@ -116,7 +124,6 @@ const Login = () => {
                 아이디 저장
               </label>
 
-              {/* 로그인 버튼은 type="submit" */}
               <Button btnType="submit" btnSize="big" btnChar="orange">
                 로그인
               </Button>
