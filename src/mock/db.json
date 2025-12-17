@@ -8,6 +8,7 @@
       "userImage": "/images/profile01.jpg",
       "userPhone": "010-0000-0000",
       "userCompany": "NPLUS(네파)",
+      "userTeam": "",
       "jobTitle": "과장"
     },
     {
@@ -18,6 +19,7 @@
       "userImage": "/images/profile02.jpg",
       "userPhone": "010-0000-0000",
       "userCompany": "STYLESHIP",
+      "userTeam": "CR",
       "jobTitle": "사원"
     },
     {
@@ -28,6 +30,7 @@
       "userImage": "/images/profile03.jpg",
       "userPhone": "010-0000-0000",
       "userCompany": "미스토코리아(주)",
+      "userTeam": "FILA",
       "jobTitle": "대리"
     },
     {
@@ -38,6 +41,107 @@
       "userImage": "/images/profile03.jpg",
       "userPhone": "010-0000-0000",
       "userCompany": "NPLUS(네파)",
+      "userTeam": "",
+      "jobTitle": "사원"
+    },
+    {
+      "id": "4",
+      "userId": "test05",
+      "userPassword": "0000",
+      "userName": "김케즈",
+      "userImage": "/images/profile01.jpg",
+      "userPhone": "010-0000-0000",
+      "userCompany": "미스토코리아(주)",
+      "userTeam": "KEDS",
+      "jobTitle": "사원"
+    },
+    {
+      "id": "5",
+      "userId": "test06",
+      "userPassword": "0000",
+      "userName": "고구마",
+      "userImage": "/images/profile02.jpg",
+      "userPhone": "010-0000-0000",
+      "userCompany": "STYLESHIP",
+      "userTeam": "UXI",
+      "jobTitle": "대리"
+    },
+    {
+      "id": "6",
+      "userId": "test07",
+      "userPassword": "0000",
+      "userName": "바나나",
+      "userImage": "/images/profile01.jpg",
+      "userPhone": "010-0000-0000",
+      "userCompany": "STYLESHIP",
+      "userTeam": "DV",
+      "jobTitle": "과장"
+    },
+    {
+      "id": "7",
+      "userId": "test08",
+      "userPassword": "0000",
+      "userName": "이승경",
+      "userImage": "/images/profile01.jpg",
+      "userPhone": "010-0000-0000",
+      "userCompany": "STYLESHIP",
+      "userTeam": "UXI",
+      "jobTitle": "사원"
+    },
+    {
+      "id": "8",
+      "userId": "test09",
+      "userPassword": "0000",
+      "userName": "케즈네",
+      "userImage": "/images/profile01.jpg",
+      "userPhone": "010-0000-0000",
+      "userCompany": "미스토코리아(주)",
+      "userTeam": "KEDS",
+      "jobTitle": "사원"
+    },
+    {
+      "id": "9",
+      "userId": "test10",
+      "userPassword": "0000",
+      "userName": "테슽흐",
+      "userImage": "/images/profile01.jpg",
+      "userPhone": "010-0000-0000",
+      "userCompany": "미스토코리아(주)",
+      "userTeam": "KEDS",
+      "jobTitle": "대리"
+    },
+    {
+      "id": "99",
+      "userId": "test99",
+      "userPassword": "0000",
+      "userName": "관리자",
+      "userImage": "/images/profile01.jpg",
+      "userPhone": "010-0000-0000",
+      "userCompany": "STYLESHIP",
+      "userTeam": "DV",
+      "jobTitle": "과장",
+      "role": "ADMIN"
+    },
+    {
+      "id": "11",
+      "userId": "test11",
+      "userPassword": "0000",
+      "userName": "스마트",
+      "userImage": "/images/profile01.jpg",
+      "userPhone": "010-0000-0000",
+      "userCompany": "STYLESHIP",
+      "userTeam": "스마트라이즈",
+      "jobTitle": "과장"
+    },
+    {
+      "id": "12",
+      "userId": "test12",
+      "userPassword": "0000",
+      "userName": "고양이",
+      "userImage": "/images/profile01.jpg",
+      "userPhone": "010-0000-0000",
+      "userCompany": "STYLESHIP",
+      "userTeam": "O2O",
       "jobTitle": "사원"
     }
   ],
@@ -54,7 +158,12 @@
       "projectStatus": "completion",
       "projectDeadline": "2025-10-20",
       "projectContent": "안녕하세요, 라이카 카메라 코리아 기획전 제작 요청드립니다.",
-      "projectTeam": "SR"
+      "projectTeam": [
+        "SR"
+      ],
+      "projectManager": [
+        "test01"
+      ]
     },
     {
       "id": "1",
@@ -68,7 +177,12 @@
       "projectStatus": "receipt",
       "projectDeadline": "2025-10-20",
       "projectContent": "안녕하세요, 라이카 카메라 코리아 기획전 제작 요청드립니다.",
-      "projectTeam": "UXI"
+      "projectTeam": [
+        "UXI"
+      ],
+      "projectManager": [
+        "test01"
+      ]
     },
     {
       "id": "2",
@@ -82,7 +196,12 @@
       "projectStatus": "cancel",
       "projectDeadline": "2025-10-20",
       "projectContent": "안녕하세요, 라이카 카메라 코리아 기획전 제작 요청드립니다.",
-      "projectTeam": "CR"
+      "projectTeam": [
+        "UXI"
+      ],
+      "projectManager": [
+        "test01"
+      ]
     },
     {
       "id": "3",
@@ -96,7 +215,12 @@
       "projectStatus": "progress",
       "projectDeadline": "2025-10-20",
       "projectContent": "안녕하세요, 라이카 카메라 코리아 기획전 제작 요청드립니다.",
-      "projectTeam": "DEV"
+      "projectTeam": [
+        "CR"
+      ],
+      "projectManager": [
+        "test03"
+      ]
     },
     {
       "id": "4",
@@ -110,21 +234,31 @@
       "projectStatus": "hold",
       "projectDeadline": "2025-10-20",
       "projectContent": "안녕하세요, 라이카 카메라 코리아 기획전 제작 요청드립니다.",
-      "projectTeam": "CR"
+      "projectTeam": [
+        "CR"
+      ],
+      "projectManager": [
+        "test02"
+      ]
     },
     {
       "id": "1760926380316",
       "projectNo": 84744,
       "projectDate": "2025-10-20",
       "projectStatus": "receipt",
-      "projectTeam": "CR",
       "writer": "강아지",
       "projectCompany": "STYLESHIP",
       "projectBrand": "FILA",
       "projectSort": "프로모션",
       "projectTitle": "프로젝트 생성 테스트",
       "projectContent": "프로모션 생성 테스트입니다.",
-      "projectDeadline": "2025-10-30"
+      "projectDeadline": "2025-10-30",
+      "projectTeam": [
+        "CR"
+      ],
+      "projectManager": [
+        "test04"
+      ]
     },
     {
       "id": "1760942585880",
@@ -141,46 +275,247 @@
       "projectDeadline": "2025-10-24"
     },
     {
-      "id": "1761285960060",
+      "id": "1761643358998",
       "projectNo": 84746,
-      "projectDate": "2025-10-24",
+      "projectDate": "2025-10-28",
       "projectStatus": "receipt",
-      "projectTeam": "CR",
-      "writer": "강아지",
-      "projectCompany": "STYLESHIP",
-      "projectBrand": "NEPA",
-      "projectSort": "프로모션",
-      "projectTitle": "TEST",
-      "projectContent": "작업일정 : 자료 접수후 5일 (영업일 기준, 주말 및 공휴일 제외)\n기타 일정시 담당자와 꼭 협의해 주시기 바랍니다.\n페이지 수정 및 변경을 요청시에는 첨부양식 사용바랍니다. 양식다운받기",
-      "projectDeadline": "2025-11-07"
-    },
-    {
-      "id": "1761285995473",
-      "projectNo": 84747,
-      "projectDate": "2025-10-24",
-      "projectStatus": "receipt",
-      "projectTeam": "CR",
-      "writer": "강아지",
-      "projectCompany": "STYLESHIP",
-      "projectBrand": "NEPA",
-      "projectSort": "이벤트",
-      "projectTitle": "e",
-      "projectContent": "f",
-      "projectDeadline": "2025-11-07"
-    },
-    {
-      "id": "1761286158785",
-      "projectNo": 84748,
-      "projectDate": "2025-10-24",
-      "projectStatus": "receipt",
-      "projectTeam": "CR",
-      "writer": "강아지",
-      "projectCompany": "STYLESHIP",
+      "writer": "홍길동",
+      "projectCompany": "NPLUS(네파)",
       "projectBrand": "NEPA",
       "projectSort": "기획전",
-      "projectTitle": "dfsfsdfs",
-      "projectContent": "fsfsdfsdfdsfdsfs",
-      "projectDeadline": "2025-11-07"
+      "projectTitle": "ㅇㅇ",
+      "projectContent": "신규 프로젝트 확인입니다. ",
+      "projectDeadline": "",
+      "projectTeam": [
+        "CR",
+        "DV",
+        "UIX"
+      ],
+      "projectManager": [
+        "test01",
+        "test07",
+        "test02",
+        "test08"
+      ]
+    },
+    {
+      "id": "1761724296366",
+      "projectNo": 84750,
+      "projectDate": "2025-10-29T07:51:36.366Z",
+      "projectStatus": "receipt",
+      "writer": "홍길동",
+      "projectCompany": "NPLUS(네파)",
+      "projectBrand": "NEPA",
+      "projectSort": "기능 수정/추가",
+      "projectTitle": "nEW 테슽 ... ㅡㅌ... ",
+      "projectContent": "TEST\nTESTTEST\nTEST\nTEST\nTEST\nTEST\nTEST\nTEST\nTEST",
+      "projectDeadline": "",
+      "projectTeam": [
+        "CR",
+        "스마트라이즈",
+        "O2O"
+      ],
+      "projectManager": [
+        "test01",
+        "test02",
+        "test12",
+        "test11"
+      ]
+    },
+    {
+      "id": "1762307940371",
+      "projectNo": 84751,
+      "projectDate": "2025-11-05T01:59:00.371Z",
+      "projectStatus": "receipt",
+      "projectTeam": [
+        "UIX"
+      ],
+      "projectManager": [
+        "0",
+        "test06"
+      ],
+      "writer": "홍길동",
+      "projectCompany": "NPLUS(네파)",
+      "projectBrand": "NEPA",
+      "projectSort": "프로모션",
+      "projectTitle": "네파 테스트 입니다",
+      "projectContent": "네파파",
+      "projectDeadline": ""
+    },
+    {
+      "id": "1762307971101",
+      "projectNo": 84752,
+      "projectDate": "2025-11-05T01:59:31.101Z",
+      "projectStatus": "receipt",
+      "projectTeam": [
+        "DV"
+      ],
+      "projectManager": [
+        "2",
+        "test99"
+      ],
+      "writer": "임꺽정",
+      "projectCompany": "미스토코리아(주)",
+      "projectBrand": "FILA",
+      "projectSort": "기획전",
+      "projectTitle": "휠라 테스트 입니다",
+      "projectContent": "휠랄라",
+      "projectDeadline": ""
+    }
+  ],
+  "comments": [
+    {
+      "id": "9495",
+      "projectId": "84745",
+      "userId": "0",
+      "createdAt": "2025-10-27T08:51:36.826Z",
+      "text": "test!"
+    },
+    {
+      "id": "bc2b",
+      "projectId": "84745",
+      "userId": "1",
+      "createdAt": "2025-10-27T08:52:05.177Z",
+      "text": "강아지가 썼어요"
+    },
+    {
+      "id": "932f",
+      "projectId": "84745",
+      "userId": "2",
+      "createdAt": "2025-10-27T08:52:27.665Z",
+      "text": "임꺽정이 썼어요"
+    },
+    {
+      "id": "08e3",
+      "projectId": "84745",
+      "userId": "2",
+      "createdAt": "2025-10-27T08:58:18.537Z",
+      "text": "250818_수정사항.jpg",
+      "file": true
+    },
+    {
+      "id": "0985",
+      "projectId": "84745",
+      "userId": "0",
+      "createdAt": "2025-10-28T09:05:44.624Z",
+      "text": "입력\n엔터"
+    },
+    {
+      "id": "264d",
+      "projectId": "84745",
+      "userId": "0",
+      "createdAt": "2025-10-30T02:35:08.430Z",
+      "text": "(기획서)25년 11월 25FW 주니어 찬스(11.1312.31).pptx",
+      "file": true
+    },
+    {
+      "id": "5307",
+      "projectId": "84745",
+      "userId": "1",
+      "createdAt": "2025-10-30T02:48:54.094Z",
+      "text": "251023_푸퍼백.zip",
+      "file": true
+    },
+    {
+      "id": "da64",
+      "projectId": "84750",
+      "userId": "0",
+      "createdAt": "2025-10-31T01:38:22.565Z",
+      "text": "@[강아지](1)  사원에게 멘션합니다."
+    },
+    {
+      "id": "cb91",
+      "projectId": "84750",
+      "userId": "8",
+      "createdAt": "2025-11-04T02:52:45.822Z",
+      "text": "@[김케즈](4)  확인~"
+    },
+    {
+      "id": "0b03",
+      "projectId": "84750",
+      "userId": "0",
+      "createdAt": "2025-11-04T08:20:08.203Z",
+      "text": "@[배고파](3)  멘션도 작동합니다. \n데이터 수정 완료."
+    },
+    {
+      "id": "5411",
+      "projectId": "84750",
+      "userId": "99",
+      "file": true,
+      "text": "251027_raffle_notice_01.jpg",
+      "createdAt": "2025-11-04T08:37:28.708Z"
+    },
+    {
+      "id": "f412",
+      "projectId": "84750",
+      "userId": "99",
+      "createdAt": "2025-11-04T08:37:44.524Z",
+      "text": "파일모아보기에서 올린 파일도 코멘트 등록 됩니다."
+    },
+    {
+      "id": "99e4",
+      "projectId": "84750",
+      "userId": "0",
+      "file": true,
+      "text": "d_251021_coco_05.jpg",
+      "createdAt": "2025-11-05T01:09:15.156Z"
+    },
+    {
+      "id": "084c",
+      "projectId": "323",
+      "userId": "ssonggyu",
+      "createdAt": "2025-12-12T05:16:02.696Z",
+      "text": "ㅁㅁㄴㅇㄻㄴ"
+    },
+    {
+      "id": "17a5",
+      "projectId": "323",
+      "userId": "ssonggyu",
+      "createdAt": "2025-12-12T05:16:06.848Z",
+      "text": "ㅋㅌㅊㅍㅋㅌㅊㅍ"
+    },
+    {
+      "id": "27f1",
+      "projectId": "323",
+      "userId": "ssonggyu",
+      "createdAt": "2025-12-12T05:18:11.660Z",
+      "text": "양말.JPG",
+      "file": true
+    },
+    {
+      "id": "15c6",
+      "projectId": "323",
+      "userId": "ssonggyu",
+      "createdAt": "2025-12-12T05:18:11.660Z",
+      "text": "ㄴㅇㅀ"
+    },
+    {
+      "id": "5ea8",
+      "projectId": "323",
+      "userId": "ssonggyu",
+      "createdAt": "2025-12-12T05:18:18.251Z",
+      "text": "@[강아지](1)"
+    },
+    {
+      "id": "9e11",
+      "projectId": "323",
+      "userId": "ssonggyu",
+      "createdAt": "2025-12-12T05:18:23.171Z",
+      "text": "@[고구마](5) ㅁㄴㅇㄹ"
+    },
+    {
+      "id": "7348",
+      "projectId": "326",
+      "userId": "company",
+      "createdAt": "2025-12-12T05:22:42.679Z",
+      "text": "234234"
+    },
+    {
+      "id": "c346",
+      "projectId": "293",
+      "userId": "shera31",
+      "createdAt": "2025-12-15T05:14:04.541Z",
+      "text": "@[관리자](99)  안녀녀녕"
     }
   ]
 }

@@ -1,15 +1,16 @@
+// src/components/feature/ProjectView.jsx
 import "@components/feature/ProjectView.css";
 import { useState, useRef, useEffect } from "react";
 import Select from "@components/common/Select";
 import CommentTask from "@components/feature/CommentTask";
 import FileTask from "@components/feature/FileTask";
 import TimeTask from "@components/feature/TimeTask";
-import { PROJECT_STATUS_OPTIONS } from "@/utils/constants";
+import { STATUS_OPTIONS_STYLESHIP } from "@/utils/constants";
 
 const ProjectView = ({ project }) => {
   const [status, setStatus] = useState(project?.projectStatus);
   const [activeTab, setActiveTab] = useState("comment");
-  const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 });
+  const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 36 });
   const [isDetailVisible, setIsDetailVisible] = useState(true);
 
   const controlRef = useRef(null);
@@ -45,12 +46,46 @@ const ProjectView = ({ project }) => {
     setStatus(project?.projectStatus);
   }, [project]);
 
+  // 🔹 URL 복사 (projectNo 기준)
   const handleCopyURL = () => {
-    const url = `${window.location.origin}/project/${project.projectNo}`;
+    if (!project) return;
+
+    // ✅ 라우터가 /project/:projectNo 기준이니까 projectNo 우선
+    const id = project.workNo ?? project.projectNo;
+
+    if (!id) {
+      alert("프로젝트 번호가 없습니다.");
+      return;
+    }
+
+    const url = `${window.location.origin}/project/${id}`;
     navigator.clipboard.writeText(url);
     alert("URL이 복사되었습니다!");
-    //showToast("URL이 복사되었습니다!");
+    // showToast("URL이 복사되었습니다!");
   };
+
+  // 🔹 날짜/시간 포맷터: 2025-08-06 오후 1:20:47
+  const formatDateTime = (raw) => {
+    if (!raw) return "";
+    const d = new Date(raw);
+    const yyyy = d.getFullYear();
+    const mm = String(d.getMonth() + 1).padStart(2, "0");
+    const dd = String(d.getDate()).padStart(2, "0");
+    const hh = d.getHours();
+    const ampm = hh >= 12 ? "오후" : "오전";
+    const hour12 = hh % 12 || 12;
+    const min = String(d.getMinutes()).padStart(2, "0");
+    const sec = String(d.getSeconds()).padStart(2, "0");
+    return `${yyyy}-${mm}-${dd} ${ampm} ${hour12}:${min}:${sec}`;
+  };
+
+  // 🔹 등록일로 쓸 필드 우선순위 (work 리스트 기준)
+  const regDate =
+    project?.workRegdate ||
+    project?.projectDate ||
+    project?.regDate ||
+    project?.createdAt ||
+    null;
 
   if (!project)
     return (
@@ -64,8 +99,8 @@ const ProjectView = ({ project }) => {
       <div className="project-info">
         <div className="hd">
           <div>
-            <p className="number">{project.projectNo}</p>
-            <p className="brand">{project.projectBrand}</p>
+            <p className="number">{project.workNo}</p>
+            <p className="brand">{project.projectName}</p>
           </div>
           <div>
             <button type="button" className="url__btn" onClick={handleCopyURL}>
@@ -75,14 +110,14 @@ const ProjectView = ({ project }) => {
             <Select
               name="status"
               value={status}
-              options={PROJECT_STATUS_OPTIONS}
+              options={STATUS_OPTIONS_STYLESHIP}
               onChange={handleStatusChange}
               className={`_status _${status}`}
             />
           </div>
         </div>
 
-        <p className="title">{project.projectTitle}</p>
+        <p className="title">{project.workTitle}</p>
 
         <div className="bt">
           <div>
@@ -94,7 +129,7 @@ const ProjectView = ({ project }) => {
           <div>
             <dl>
               <dt>등록일</dt>
-              <dd>{project.projectDate}</dd>
+              <dd>{formatDateTime(regDate)}</dd>
             </dl>
             <dl>
               <dt>마감일</dt>
@@ -152,6 +187,7 @@ const ProjectView = ({ project }) => {
           <CommentTask
             projectId={project.projectNo}
             projectCompany={project.projectCompany}
+            projectTitle={project.projectTitle}
           />
         )}
         {activeTab === "file" && <FileTask projectId={project.projectNo} />}

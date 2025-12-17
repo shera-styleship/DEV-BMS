@@ -1,0 +1,114 @@
+/* 전체 래퍼 */
+.mentionWrap {
+  position: relative;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* 입력 영역 */
+.CommentTask .comment-input textarea.mentionWrap__input {
+  overflow: auto !important;
+}
+
+/* 하이라이터 (mentions 토큰 배경) */
+.mentionWrap__highlighter {
+  max-height: 56px;
+  border: none !important;
+  z-index: 3;
+  pointer-events: none;
+}
+.mentionWrap__highlighter strong {
+  color: rgb(51, 51, 51);
+  font-weight: 500 !important;
+  /* background-color: #f8f8f8; */
+}
+
+/* 제안 리스트 박스 */
+.mentionWrap__suggestions__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.16);
+  border-radius: 10px;
+  width: 330px;
+  max-height: 300px;
+  margin: 0;
+  list-style: none;
+  z-index: 10;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.mentionWrap__suggestions__list::-webkit-scrollbar {
+  display: none;
+}
+
+/* 제안 항목 */
+.mentionWrap__suggestions__item {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 10px;
+  width: 110px;
+  max-height: 84px;
+  cursor: pointer;
+}
+.mentionWrap__suggestions__item.is-focused {
+  background-color: rgb(234, 245, 255);
+}
+.mentionWrap__suggestions__item:has(.company-name) {
+  grid-column-start: 1; /* 다음 줄의 첫번째 칸 */
+  grid-column-end: auto;
+}
+.mentionWrap__suggestions__item > div {width: 100%;}
+
+/* 회사 구분 헤더 */
+.company-name {
+  position: sticky;
+  top: 0;
+  background: rgb(255, 255, 255);
+  width: 330px;
+  box-sizing: border-box;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+  padding: 6px 10px;
+  border-top: 1px solid rgb(229, 231, 235);
+  border-bottom: 1px solid rgb(229, 231, 235);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.mentions__suggestions__row {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 10px;
+  background: rgb(255, 255, 255);
+  width: 100%;
+  max-width: 110px;
+  box-sizing: border-box;
+}
+.mentions__suggestions__row.is-focused {
+  background-color: rgb(255, 236, 229);
+}
+.mentions__suggestions__row img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+.mentions__suggestions__row small {
+  margin-top: 2px;
+  color: rgb(107, 114, 128);
+  line-height: 1;
+}
+.mentions__suggestions__row > div {
+  display: flex;
+  flex-direction: column;
+}

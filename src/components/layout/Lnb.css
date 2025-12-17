@@ -81,7 +81,7 @@
   background-size: 16px;
 }
 .icon-schedule {
-  background-image: url(../src/assets/images/icon/ico_schedule.svg);
+  background-image: url(@/assets/images/icon/ico_schedule.svg);
   background-size: 15.5px;
 }
 .icon-knowledge {
@@ -171,3 +171,4 @@ li:hover .arrow-right:before {
   display: none;
 }
 /* //Lnb */
+

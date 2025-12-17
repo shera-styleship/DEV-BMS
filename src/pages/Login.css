@@ -28,40 +28,7 @@
   width: 219px;
   height: 43px;
 }
-.Login_id_remember {
-  display: flex;
-  gap: 8px;
-  position: relative;
+.checkbox_label {
   font-size: 10px;
-  color: #999999;
-  cursor: pointer;
-}
-.Login_id_remember input {
-  position: absolute;
-  cursor: pointer;
-  opacity: 0;
-}
-.Login_id_remember_checkbox {
-  display: inline-block;
-  border: 1px solid #cccccc;
-  position: relative;
-  width: 13px;
-  height: 13px;
-  border-radius: 3px;
-  box-sizing: border-box;
-}
-.Login_id_remember input:checked + .Login_id_remember_checkbox {
-  border-color: #ff4500;
-  background-color: #ff4500;
-}
-.Login_id_remember input:checked + .Login_id_remember_checkbox::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 9px;
-  height: 6px;
-  background: url(@/assets/images/icon/checkbox.svg) 50% 50% / cover;
-  content: "";
-  transform: translate(-50%, -50%);
 }
 /* //Login */

@@ -39,6 +39,7 @@ src/
 | **Feature** | 특정 기능 담당, 내부 상태 포함 | `ProjectList`, `ProjectView`, `ProjectFilterBar`, `ProjectItem`, `NewProject`    |
 | **Utils**   | 순수 함수, API 모듈, 포맷터    | `constants`, `getUserImageSrc`            |
 | **Hooks**   | 로직 재사용을 위한 커스텀 훅   |     |
+| **Config**   | 설정 데이터  |  `filterBarOptions`  |
 
 
 ## 🗂️  doc/ - 내부 가이드
@@ -58,6 +59,7 @@ src/
 | [`Button.md`](./components/Button.md) | 공용 버튼 컴포넌트 가이드 |
 | [`Input.md`](./components/Input.md) | 공용 인풋 컴포넌트 가이드 |
 | [`Select.md`](./components/Select.md) | 공용 셀렉트 컴포넌트 가이드 |
+| [`Checkbox.md`](./components/Checkbox.md) | 공용 체크박스 컴포넌트 가이드 |
 
 ## 📘 전체 모듈 및 파일 구조 설명
 
@@ -85,10 +87,13 @@ src/
 
 | 파일명 | 📝 설명 |
 |:--|:--|
+| `Alarm.jsx` | 헤더 알람 노출 컴포넌트 |
+| `AlarmItem.jsx` | 알람 컴포넌트 내 아이템 렌더링 |
+| `Alert.jsx` | 알림/확인 레이어 컴포넌트 |
 | `Button.jsx` | 기본 버튼 컴포넌트 |
 | `Input.jsx` | 기본 인풋 컴포넌트 |
 | `Select.jsx` | 커스텀 셀렉트 컴포넌트 |
-| `Alert.jsx` | 알림/확인 레이어 컴포넌트 |
+| `Checkbox.jsx` | 체크박스 컴포넌트 |
 
 #### 🔹 components/layout/
 전체 페이지의 공통 구조 요소입니다.
@@ -111,6 +116,8 @@ src/
 | `CommentTask.jsx` | 프로젝트 상세 하단 탭 내 코멘트 렌더링 |
 | `FileTask.jsx` | 프로젝트 상세 하단 탭 내 파일 모아보기 렌더링 |
 | `TimeTask.jsx` | 프로젝트 상세 하단 탭 내 작업 시간 렌더링 |
+| `Mentions.jsx` | 멘션, react-mentions 라이브러리 사용 |
+| `AssignManager.jsx` | 프로젝트별 작업위임(담당자) 등록 및 수정 컴포넌트 |
 
 #### 🔹 components/network/
 네트워크 관련 컴포넌트입니다.
@@ -124,9 +131,12 @@ src/
 |:--|:--|
 | `constants.js` | 공용 상수 정의 |
 | `getUserImageSrc.js` | 사용자 프로필 이미지 경로 반환 함수 |
+| `env.js` | 환경설정 |
+| `filterBarOptions.js` | 프로젝트 리스트 필터링 옵션(회사/브랜드) |
 
 ### 🗂️ 5. mock/ - 임시 데이터
 | 파일명 | 📝 설명 |
 |:--|:--|
 | `db.json` | 테스트용 임시 데이터(JSON) 파일 |
+
 

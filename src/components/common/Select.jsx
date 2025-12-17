@@ -5,8 +5,12 @@ const Select = ({ name, value, options, onChange, className = "" }) => {
   const [isOpen, setIsOpen] = useState(false);
   const wrapperRef = useRef(null);
 
+  // 현재 선택된 옵션 (없으면 첫 번째 옵션)
   const selectedOption =
     options.find((opt) => opt.value === value) || options[0];
+
+  // 🔸 value가 "all" 이거나 비어 있으면 플레이스홀더(비활성 스타일)
+  const isPlaceholder = value === "all" || value === "" || value == null;
 
   const handleSelect = (optValue) => {
     onChange({ target: { name, value: optValue } });
@@ -31,7 +35,8 @@ const Select = ({ name, value, options, onChange, className = "" }) => {
     >
       <button
         type="button"
-        className={`select-display ${value ? "selected" : ""}`}
+        // 🔸 "all" 일 때는 selected 클래스 안 붙임 → 회색 유지
+        className={`select-display ${!isPlaceholder ? "selected" : ""}`}
         onClick={() => setIsOpen((prev) => !prev)}
       >
         {selectedOption.label}

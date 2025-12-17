@@ -1,0 +1,108 @@
+.assign_backdrop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 2000;
+    background: rgba(0,0,0,0.5);
+    inset: 0;
+}
+.assign_dialog{
+    padding: 34px;
+    overflow: hidden;
+    width: 766px;
+    height: auto;
+    background-color: rgb(255, 255, 255 );
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.assign_title {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    font-size: 16px;
+    font-weight: 700;
+}
+.assign_contents {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    padding-top: 24px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.assign_contents dl {
+    display: flex;
+}
+.assign_contents dl dt {
+    width: 125px;
+    color: rgb(0, 0, 0);
+}
+.assign_contents dl dd {
+    color: rgb(153, 153, 153);
+}
+.assign_tabs {
+    display: flex;
+    gap: 32px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    position: relative;
+}
+.assign_tabs>button {
+    padding-bottom: 11px;
+    border: none;
+    position: relative;
+    background: none;
+    font-size: 14px;
+    font-weight: 300;
+    color: rgb(153, 153, 153);
+    cursor: pointer;
+}
+.assign_tabs>button.on {
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+.assign_underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 55px;
+  height: 2px;
+  background: #000;
+  transition: left .3s ease, width .3s ease;  /* 슈웅~ */
+  border-radius: 1px;
+}
+.assign_users {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    padding-top: 24px;
+    font-size: 14px;
+}
+.assign_users .team_title {
+    font-weight: 500;
+}
+.assign_users .user_list {
+    display: grid;
+    font-weight: 400;
+    color: rgb(153, 153, 153);
+    grid-template-columns: repeat(6,1fr);
+}
+.assign_users .checkbox_label {
+    font-size: 14px;
+}
+.checkbox_box {
+    width: 16px;
+    height: 16px;
+}
+.team_title {
+    padding-bottom: 5px;
+    color: rgb(51, 51, 51);
+}
+
+.assign_footer{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 32px
+}
